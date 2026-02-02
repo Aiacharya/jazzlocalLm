@@ -1,0 +1,24 @@
+# Model Registry Configuration
+# Models will be downloaded from Hugging Face if not already cached locally
+
+models:
+  - name: "qwen2.5-3b-instruct"
+    hf_id: "Qwen/Qwen2.5-3B-Instruct"
+    description: "Qwen 2.5 3B Instruct model - lightweight and efficient"
+    max_length: 4096
+    dtype: "float16"  # float16, bfloat16, or float32
+    
+  - name: "qwen2.5-7b-instruct"
+    hf_id: "Qwen/Qwen2.5-7B-Instruct"
+    description: "Qwen 2.5 7B Instruct model - larger capacity"
+    max_length: 4096
+    dtype: "float16"
+    
+  - name: "qwen2.5-1.5b-instruct"
+    hf_id: "Qwen/Qwen2.5-1.5B-Instruct"
+    description: "Qwen 2.5 1.5B Instruct model - smallest option"
+    max_length: 4096
+    dtype: "float16"
+
+# Default model to load on startup (optional)
+default_model: "qwen2.5-3b-instruct"
