@@ -191,10 +191,10 @@ def test_conversation():
         print(f"[FAIL] Conversation error: {e}")
         return False
 
-def test_opencrawl_format():
-    """Test format suitable for OpenCrawl integration."""
+def test_openclaw_format():
+    """Test format suitable for OpenClaw integration."""
     print("\n" + "=" * 60)
-    print("5. Testing OpenCrawl Integration Format")
+    print("5. Testing OpenClaw Integration Format")
     print("=" * 60)
     
     # Simulate crawled content
@@ -229,7 +229,7 @@ def test_opencrawl_format():
             print("-" * 60)
             print(summary)
             print("-" * 60)
-            print("\n[OK] Model is ready for OpenCrawl integration!")
+            print("\n[OK] Model is ready for OpenClaw integration!")
             return True
         else:
             print(f"[FAIL] Summarization failed: {response.status_code}")
@@ -252,7 +252,7 @@ def main():
     results.append(("Chat Completion", test_chat_completion()))
     results.append(("Text Generation", test_text_generation()))
     results.append(("Multi-Turn Conversation", test_conversation()))
-    results.append(("OpenCrawl Format", test_opencrawl_format()))
+    results.append(("OpenClaw Format", test_openclaw_format()))
     
     # Summary
     print("\n" + "=" * 60)
@@ -269,9 +269,9 @@ def main():
     print(f"\nResults: {passed}/{total} tests passed")
     
     if passed == total:
-        print("\n[SUCCESS] All tests passed! Model is ready for OpenCrawl integration.")
-        print("\nYou can now use the model with OpenCrawl:")
-        print("  python opencrawl_integration.py")
+        print("\n[SUCCESS] All tests passed! Model is ready for OpenClaw integration.")
+        print("\nYou can now use the model with OpenClaw:")
+        print("  python openclaw_integration.py")
     else:
         print(f"\n[WARN] {total - passed} test(s) failed. Please check the errors above.")
     

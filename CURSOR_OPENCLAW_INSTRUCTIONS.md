@@ -1,7 +1,7 @@
-# OpenCrawl + Local LLM Integration Instructions
+# OpenClaw + Local LLM Integration Instructions
 
 ## Goal
-Integrate OpenCrawl with the local LLM inference server to process crawled web content.
+Integrate OpenClaw with the local LLM inference server to process crawled web content.
 
 ## Current Setup
 - **LLM Server**: Running on `http://127.0.0.1:8000/api`
@@ -11,16 +11,16 @@ Integrate OpenCrawl with the local LLM inference server to process crawled web c
 
 ## Integration Steps
 
-### Step 1: Install OpenCrawl (if not already installed)
+### Step 1: Install OpenClaw (if not already installed)
 ```powershell
-pip install opencrawl
+pip install openclaw
 # OR if using a different package name, install accordingly
 ```
 
-### Step 2: Create OpenCrawl Integration Script
+### Step 2: Create OpenClaw Integration Script
 
 Create a script that:
-1. Uses OpenCrawl to fetch web content
+1. Uses OpenClaw to fetch web content
 2. Sends content to the LLM API for processing
 3. Handles responses and stores results
 
@@ -33,12 +33,12 @@ Create a script that:
 
 ```python
 import requests
-from opencrawl import OpenCrawl  # Adjust import based on actual package
+from openclaw import OpenClaw  # Adjust import based on actual package
 
 LLM_API = "http://127.0.0.1:8000/api"
 
-# 1. Crawl content with OpenCrawl
-crawler = OpenCrawl()
+# 1. Crawl content with OpenClaw
+crawler = OpenClaw()
 urls = ["https://example.com/article"]
 crawled_data = crawler.crawl(urls)
 
@@ -64,19 +64,19 @@ for page in crawled_data:
 
 ### Step 4: Use Existing Integration Helper
 
-The project already has `opencrawl_integration.py` with helper functions:
-- `OpenCrawlLLMClient` class
+The project already has `openclaw_integration.py` with helper functions:
+- `OpenClawLLMClient` class
 - `summarize_content()` method
 - `extract_key_info()` method
 - `answer_question()` method
 
 **Quick Start:**
 ```python
-from opencrawl_integration import OpenCrawlLLMClient
+from openclaw_integration import OpenClawLLMClient
 
-client = OpenCrawlLLMClient()
+client = OpenClawLLMClient()
 
-# Get content from OpenCrawl (replace with actual OpenCrawl code)
+# Get content from OpenClaw (replace with actual OpenClaw code)
 content = "crawled web content here"
 
 # Process with LLM
@@ -88,15 +88,15 @@ summary = client.summarize_content(content)
 **Copy this prompt to Cursor:**
 
 ```
-I need to integrate OpenCrawl with my local LLM server. 
+I need to integrate OpenClaw with my local LLM server. 
 
 The LLM API is running at http://127.0.0.1:8000/api and is tested and working.
 
 Please:
-1. Check if OpenCrawl is installed, if not install it
-2. Review the existing opencrawl_integration.py file
+1. Check if OpenClaw is installed, if not install it
+2. Review the existing openclaw_integration.py file
 3. Create or update a working script that:
-   - Uses OpenCrawl to crawl URLs
+   - Uses OpenClaw to crawl URLs
    - Sends crawled content to the LLM API for summarization/processing
    - Handles errors gracefully
    - Saves results to a file
@@ -113,12 +113,12 @@ Test the integration with a simple example URL.
 After integration, test with:
 ```powershell
 python test_model_api.py  # Verify LLM is working
-python opencrawl_example.py  # Test OpenCrawl integration
+python openclaw_example.py  # Test OpenClaw integration
 ```
 
 ## Expected Workflow
 
-1. **Crawl**: OpenCrawl fetches content from URLs
+1. **Crawl**: OpenClaw fetches content from URLs
 2. **Process**: Send content to LLM API (`/api/generate` or `/api/chat`)
 3. **Extract**: Get summary/key info from LLM response
 4. **Store**: Save processed results
@@ -154,6 +154,6 @@ python opencrawl_example.py  # Test OpenCrawl integration
 ---
 
 **Credits:**
-- Learner way to provide brain to Openclaw
+- Learner way to provide brain to OpenClaw
 - 90Xboot.com Learning in Public
 - Developed by Pankaj Tiwari https://www.linkedin.com/in/genai-guru-pankaj/

@@ -175,6 +175,6 @@ Expected response should match OpenAI format exactly.
 ---
 
 **Credits:**
-- Learner way to provide brain to Openclaw
+- Learner way to provide brain to OpenClaw
 - 90Xboot.com Learning in Public
 - Developed by Pankaj Tiwari https://www.linkedin.com/in/genai-guru-pankaj/

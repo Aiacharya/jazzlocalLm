@@ -162,6 +162,6 @@ Both API sets work simultaneously and independently!
 ---
 
 **Credits:**
-- Learner way to provide brain to Openclaw
+- Learner way to provide brain to OpenClaw
 - 90Xboot.com Learning in Public
 - Developed by Pankaj Tiwari https://www.linkedin.com/in/genai-guru-pankaj/

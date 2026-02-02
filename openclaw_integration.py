@@ -1,6 +1,6 @@
 """
-OpenCrawl Integration Script
-Connects OpenCrawl with the local LLM inference server for content processing.
+OpenClaw Integration Script
+Connects OpenClaw with the local LLM inference server for content processing.
 """
 import requests
 import json
@@ -14,9 +14,9 @@ logger = logging.getLogger(__name__)
 LLM_API_BASE = "http://127.0.0.1:8000/api"
 
 
-class OpenCrawlLLMClient:
+class OpenClawLLMClient:
     """
-    Client for integrating OpenCrawl with the local LLM inference server.
+    Client for integrating OpenClaw with the local LLM inference server.
     """
     
     def __init__(self, api_base: str = LLM_API_BASE):
@@ -170,12 +170,12 @@ Tags: [tag1, tag2, tag3]"""
         
         for url in urls:
             try:
-                # In a real implementation, you would fetch content from OpenCrawl here
+                # In a real implementation, you would fetch content from OpenClaw here
                 # For now, this is a placeholder
                 logger.info(f"Processing {url}...")
                 
-                # Placeholder: In real usage, get content from OpenCrawl
-                # content = opencrawl.get_content(url)
+                # Placeholder: In real usage, get content from OpenClaw
+                # content = openclaw.get_content(url)
                 content = f"Content from {url}"  # Placeholder
                 
                 if operation == "summarize":
@@ -273,10 +273,10 @@ Tags: [tag1, tag2, tag3]"""
 
 
 def example_usage():
-    """Example usage of OpenCrawl integration."""
+    """Example usage of OpenClaw integration."""
     
     # Initialize client
-    client = OpenCrawlLLMClient()
+    client = OpenClawLLMClient()
     
     # Example 1: Summarize content
     print("\n=== Example 1: Summarize Content ===")
@@ -309,18 +309,18 @@ def example_usage():
     print(f"Metadata: {json.dumps(metadata, indent=2)}\n")
 
 
-def integrate_with_opencrawl_api(opencrawl_urls: List[str]):
+def integrate_with_openclaw_api(openclaw_urls: List[str]):
     """
-    Integration function to use with OpenCrawl.
+    Integration function to use with OpenClaw.
     
     Args:
-        opencrawl_urls: List of URLs from OpenCrawl to process
+        openclaw_urls: List of URLs from OpenClaw to process
     """
-    client = OpenCrawlLLMClient()
+    client = OpenClawLLMClient()
     
     # Process each URL
     results = client.process_crawled_urls(
-        urls=opencrawl_urls,
+        urls=openclaw_urls,
         operation="summarize"  # or "extract", "analyze"
     )
     

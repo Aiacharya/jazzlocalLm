@@ -1,10 +1,10 @@
 """
-Complete example: OpenCrawl → LLM Processing Pipeline
+Complete example: OpenClaw → LLM Processing Pipeline
 
-This shows a full workflow of how to integrate OpenCrawl with your LLM server.
+This shows a full workflow of how to integrate OpenClaw with your LLM server.
 """
 import requests
-from opencrawl_integration import OpenCrawlLLMClient
+from openclaw_integration import OpenClawLLMClient
 import json
 
 # LLM Server must be running: python main.py
@@ -15,16 +15,16 @@ def crawl_and_process_workflow():
     """
     Complete workflow: Crawl → Process → Store
     
-    This is a template - replace OpenCrawl API calls with actual OpenCrawl integration.
+    This is a template - replace OpenClaw API calls with actual OpenClaw integration.
     """
     
     # Step 1: Initialize LLM client
     print("Initializing LLM client...")
-    llm_client = OpenCrawlLLMClient()
+    llm_client = OpenClawLLMClient()
     
-    # Step 2: Simulate getting URLs from OpenCrawl
-    # In real usage, you would call OpenCrawl API here
-    print("\n=== Step 1: Get URLs from OpenCrawl ===")
+    # Step 2: Simulate getting URLs from OpenClaw
+    # In real usage, you would call OpenClaw API here
+    print("\n=== Step 1: Get URLs from OpenClaw ===")
     crawled_urls = [
         "https://example.com/article1",
         "https://example.com/article2",
@@ -39,13 +39,13 @@ def crawl_and_process_workflow():
     for url in crawled_urls:
         print(f"\nProcessing: {url}")
         
-        # In real usage, fetch content from OpenCrawl
-        # content = opencrawl.get_page_content(url)
+        # In real usage, fetch content from OpenClaw
+        # content = openclaw.get_page_content(url)
         # For demo, using placeholder
         content = f"""
         This is sample content from {url}. 
         In a real implementation, this would be the actual crawled content
-        from OpenCrawl. The LLM will process this content to extract insights,
+        from OpenClaw. The LLM will process this content to extract insights,
         summarize, or answer questions about it.
         """
         
@@ -89,33 +89,33 @@ def crawl_and_process_workflow():
     
     # Step 5: Save results (optional)
     print("\n=== Step 4: Saving Results ===")
-    with open("opencrawl_processed_results.json", "w", encoding="utf-8") as f:
+    with open("openclaw_processed_results.json", "w", encoding="utf-8") as f:
         json.dump(processed_results, f, indent=2, ensure_ascii=False)
-    print("Results saved to: opencrawl_processed_results.json")
+    print("Results saved to: openclaw_processed_results.json")
     
     return processed_results
 
 
-def real_opencrawl_integration_example():
+def real_openclaw_integration_example():
     """
-    Template for real OpenCrawl integration.
+    Template for real OpenClaw integration.
     
-    Replace placeholder code with actual OpenCrawl API calls.
+    Replace placeholder code with actual OpenClaw API calls.
     """
     
-    llm_client = OpenCrawlLLMClient()
+    llm_client = OpenClawLLMClient()
     
-    # Example: If OpenCrawl has a REST API
-    # import opencrawl_client
+    # Example: If OpenClaw has a REST API
+    # import openclaw_client
     # 
     # # Start crawl job
-    # crawl_job = opencrawl_client.start_crawl(
+    # crawl_job = openclaw_client.start_crawl(
     #     urls=["https://example.com"],
     #     max_pages=10
     # )
     # 
     # # Wait for completion
-    # results = opencrawl_client.get_results(crawl_job.id)
+    # results = openclaw_client.get_results(crawl_job.id)
     # 
     # # Process each result with LLM
     # for page in results.pages:
@@ -124,7 +124,7 @@ def real_opencrawl_integration_example():
     #     print(f"URL: {page.url}")
     #     print(f"Summary: {summary}\n")
     
-    print("Replace this with actual OpenCrawl API integration")
+    print("Replace this with actual OpenClaw API integration")
 
 
 if __name__ == "__main__":
@@ -136,7 +136,7 @@ if __name__ == "__main__":
         print("Integration Complete!")
         print("="*60)
         print(f"\nProcessed {len(results)} URLs")
-        print("Check 'opencrawl_processed_results.json' for full results")
+        print("Check 'openclaw_processed_results.json' for full results")
         
     except ConnectionError as e:
         print(f"\n✗ Error: {e}")

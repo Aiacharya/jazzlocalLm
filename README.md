@@ -3,7 +3,7 @@ https://github.com/Aiacharya/jazzlocalLm
 
 A production-ready FastAPI-based inference server for local Hugging Face transformer models, optimized for GPU usage on Windows.
 
-**Learner way to provide brain to Openclaw**  
+**Learner way to provide brain to OpenClaw**  
 **90Xboot.com Learning in Public**  
 **Developed by Pankaj Tiwari** - https://www.linkedin.com/in/genai-guru-pankaj/
 
@@ -420,6 +420,6 @@ This is a production-ready template. Customize as needed for your use case.
 ---
 
 **Credits:**
-- Learner way to provide brain to Openclaw
+- Learner way to provide brain to OpenClaw
 - 90Xboot.com Learning in Public
 - Developed by Pankaj Tiwari - https://www.linkedin.com/in/genai-guru-pankaj/

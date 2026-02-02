@@ -1,10 +1,10 @@
-# OpenCrawl Integration Guide
+# OpenClaw Integration Guide
 
-This guide shows how to connect your local LLM inference server with OpenCrawl for web content processing.
+This guide shows how to connect your local LLM inference server with OpenClaw for web content processing.
 
 ## Overview
 
-Your LLM server exposes REST APIs that OpenCrawl can use to:
+Your LLM server exposes REST APIs that OpenClaw can use to:
 - Process crawled web content (summarization, extraction, Q&A)
 - Generate prompts based on crawled data
 - Analyze and transform web content
@@ -13,7 +13,7 @@ Your LLM server exposes REST APIs that OpenCrawl can use to:
 
 Your server runs on `http://127.0.0.1:8000` with these key endpoints:
 
-### 1. Chat Completion (Recommended for OpenCrawl)
+### 1. Chat Completion (Recommended for OpenClaw)
 ```
 POST http://127.0.0.1:8000/api/chat
 ```
@@ -32,7 +32,7 @@ GET http://127.0.0.1:8000/api/health
 
 ### Pattern 1: Process Crawled Content
 
-Use OpenCrawl to fetch web content, then send it to your LLM for processing.
+Use OpenClaw to fetch web content, then send it to your LLM for processing.
 
 ### Pattern 2: LLM-Guided Crawling
 
@@ -58,12 +58,12 @@ Crawl → Extract → Summarize with LLM → Store results
 
 3. **Test the integration:**
    ```powershell
-   python opencrawl_integration.py
+   python openclaw_integration.py
    ```
 
 4. **Run full workflow example:**
    ```powershell
-   python opencrawl_example.py
+   python openclaw_example.py
    ```
 
 ## Example Use Cases
@@ -79,10 +79,10 @@ Crawl → Extract → Summarize with LLM → Store results
 ### Basic Usage
 
 ```python
-from opencrawl_integration import OpenCrawlLLMClient
+from openclaw_integration import OpenClawLLMClient
 
 # Initialize client
-client = OpenCrawlLLMClient()
+client = OpenClawLLMClient()
 
 # Summarize content
 summary = client.summarize_content(crawled_content)
@@ -118,14 +118,14 @@ print(result["content"])
 ## Integration Steps
 
 1. **Ensure LLM server is running** (`python main.py`)
-2. **Import the integration client** (`from opencrawl_integration import OpenCrawlLLMClient`)
-3. **Get content from OpenCrawl** (via OpenCrawl API/SDK)
+2. **Import the integration client** (`from openclaw_integration import OpenClawLLMClient`)
+3. **Get content from OpenClaw** (via OpenClaw API/SDK)
 4. **Process with LLM** using the client methods
 5. **Store/use results** as needed
 
 ## Configuration
 
-Edit `opencrawl_integration.py` to change:
+Edit `openclaw_integration.py` to change:
 - `LLM_API_BASE`: Server URL (default: `http://127.0.0.1:8000/api`)
 - Generation parameters (temperature, max_tokens, etc.)
 - Processing logic for your specific use case
@@ -133,6 +133,6 @@ Edit `opencrawl_integration.py` to change:
 ---
 
 **Credits:**
-- Learner way to provide brain to Openclaw
+- Learner way to provide brain to OpenClaw
 - 90Xboot.com Learning in Public
 - Developed by Pankaj Tiwari https://www.linkedin.com/in/genai-guru-pankaj/
